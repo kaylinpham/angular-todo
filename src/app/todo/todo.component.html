@@ -1,0 +1,65 @@
+<div class="homepage">
+  <div class="user">
+    <img src="../../assets/images/user.png" />{{ auth.user?.username }}
+  </div>
+  <div class="logout" (click)="logout()">
+    <img src="../../assets/images/logout.png" /><b>LOG OUT</b>
+  </div>
+  <aside class="banner">
+    <img src="../../assets/images/default.png" />
+    <input
+      type="text"
+      placeholder="Type somthing to do..."
+      (keyup.enter)="saveTodo(input)"
+      #input
+    />
+    <p><b>ENTER</b> makes your life simple</p>
+  </aside>
+  <div class="content">
+    <ul
+      class="todolist"
+      *ngFor="
+        let todo of todoList
+          | paginate
+            : {
+                id: 'todos-paging',
+                itemsPerPage: 10,
+                currentPage: currentPage
+              }
+      "
+    >
+      <li
+        id="todo.id"
+        [class]="todo.completed ? 'todo-item todo-completed' : 'todo-item'"
+      >
+        <p>
+          <img
+            class="delete-item"
+            src="../../assets/images/garbage.png"
+            title="delete"
+            (click)="deleteTodo(todo.id)"
+          /><img
+            class="edit-item"
+            src="../../assets/images/edit_icon.png"
+            title="edit"
+            (click)="editTitle(todo, input)"
+          /><span (click)="completeToggle(todo)">{{ todo.title }}</span>
+        </p>
+      </li>
+    </ul>
+    <pagination-controls
+      class="paging-controls"
+      id="todos-paging"
+      (pageChange)="pageChanged($event)"
+      maxSize="10"
+      directionLinks="true"
+      autoHide="true"
+      responsive="true"
+      previousLabel="Previous"
+      nextLabel="Next"
+      screenReaderPaginationLabel="Pagination"
+      screenReaderPageLabel="page"
+    >
+    </pagination-controls>
+  </div>
+</div>

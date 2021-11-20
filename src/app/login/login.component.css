@@ -1,0 +1,63 @@
+.login__container {
+  background-image: url("../../assets/images/login_signup_bg.jpg");
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.form {
+  background-color: var(--form-bg-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 2rem;
+  color: aliceblue;
+}
+.blur-color__text {
+  color: rgb(124, 124, 124);
+}
+.form input {
+  background: rgb(82, 81, 81);
+  border-color: transparent;
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  outline: #5765f2;
+  color: aliceblue;
+  display: block;
+  width: 480px;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.form-control {
+  margin: 1rem 0 0.5rem 0;
+  align-items: center;
+  background: inherit;
+  color: white;
+  border: none;
+}
+.form button {
+  display: block;
+  background: #5765f2;
+  color: var(--clr-white);
+  border-color: transparent;
+  margin: 1.5rem auto 0.5rem;
+  letter-spacing: var(--spacing);
+  padding: 0.5rem;
+  text-transform: capitalize;
+  border-radius: var(--radius);
+  cursor: pointer;
+  width: 480px;
+  font-size: 1rem;
+  outline: none;
+}
+.form button:hover {
+  background-color: #4957f0;
+}
+.link {
+  color: #38b5e7;
+  font-size: 0.8rem;
+}

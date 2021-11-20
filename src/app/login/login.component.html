@@ -1,0 +1,41 @@
+<div class="login__container">
+  <article class="form">
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+      <h3>Let's DO</h3>
+      <p class="blur-color__text mt05">Rất vui khi được gặp lại bạn!</p>
+      <div class="form-control">
+        <label htmlFor="username">Tên đăng nhập: </label>
+        <input
+          required
+          formControlName="username"
+          type="text"
+          id="username"
+          name="username"
+          [class]="
+            username?.errors?.required && username?.touched
+              ? 'invalid-input'
+              : ''
+          "
+        />
+      </div>
+      <div class="form-control">
+        <label htmlFor="password">Mật khẩu: </label>
+        <input
+          required
+          formControlName="password"
+          type="password"
+          id="password"
+          name="password"
+          [class]="
+            password?.errors?.required && password?.touched
+              ? 'invalid-input'
+              : ''
+          "
+        />
+      </div>
+      <button type="submit" [disabled]="username?.invalid || password?.invalid">
+        Đăng nhập
+      </button>
+    </form>
+  </article>
+</div>

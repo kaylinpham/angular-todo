@@ -1,0 +1,126 @@
+.homepage {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(46, 46, 46);
+  display: flex;
+  flex-direction: row;
+}
+
+.banner {
+  flex-basis: 50%;
+}
+
+.banner img {
+  display: block;
+  margin: auto;
+}
+
+.banner input {
+  width: 70%;
+  padding: 0.8rem 1rem;
+  box-sizing: border-box;
+  margin: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.banner input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.banner p {
+  margin: auto;
+  color: white;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.user {
+  position: absolute;
+  right: 0.5rem;
+  display: flex;
+  align-items: center;
+  top: 0.5rem;
+  color: white;
+  border: solid 1px black;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+
+.user img {
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.content {
+  flex-basis: 50%;
+  box-sizing: border-box;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.todolist {
+  width: 80%;
+  margin: auto;
+}
+
+.todo-item {
+  background: rgba(231, 231, 231, 0.3);
+  border-radius: 10px;
+  border: 3px solid rgb(19, 18, 18);
+  padding: 0.4rem 0.8rem 0.4rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.todo-item p {
+  display: block;
+}
+
+.todo-item p img {
+  width: 2rem;
+  position: relative;
+  left: -1.5rem;
+  cursor: pointer;
+}
+
+.edit-item {
+  width: 1.5rem !important;
+  left: -0.5rem !important;
+}
+
+.todo-item p {
+  display: flex;
+  align-items: center;
+  margin-left: -1rem;
+  cursor: pointer;
+}
+
+.todo-completed {
+  text-decoration: line-through white 2px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.logout {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.7rem;
+  cursor: pointer;
+}
+
+.logout img {
+  width: 2rem;
+}
+
+.logout:hover {
+  color: white;
+}
+
+.paging-controls {
+  position: absolute;
+  bottom: 5rem;
+}
